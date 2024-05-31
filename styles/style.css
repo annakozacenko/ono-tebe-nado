@@ -1,15 +1,10 @@
 /* Шапка */
 
-body {
-  font-family: Raleway, sans-serif;
-}
-
 .header {
   background: #fff;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr auto 1fr;
-  height: min-content;
   margin: 92px 24px;
   padding: 0 28px 0 26.52px;
 }
@@ -18,7 +13,7 @@ body {
   justify-self: start;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.13px;
+  line-height: 1.17;
 }
 
 .header__links-list {
@@ -33,7 +28,7 @@ body {
 
 .header__links-list-item a {
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: 4px;
   letter-spacing: 0.01em;
 }
 
@@ -50,12 +45,15 @@ body {
 }
 
 .header__address {
+  display: flex;
   justify-self: end;
-  text-align: left;
+  align-items: start;
+  flex-direction: column;
   font-size: 18px;
   font-weight: 400;
-  line-height: 24.3px;
-  width: 237px;
+  line-height: 1.35;
+  max-width: 237px;
+  width: 100%;
   text-underline-offset: 4px;
   font-style: normal;
 }
@@ -86,8 +84,6 @@ body {
 
 .overlay {
   inset: 0;
-  top: 0;
-  left: 0;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -98,75 +94,63 @@ body {
 .cover_title {
   position: relative;
   z-index: 2;
-  margin: 165px 50px 60px;
+  margin: 166px 50px 60px;
   gap: 20px 0;
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 100px;
+  color: #fff;
 }
 
-.cover_title .first-line {
+.aligned-text {
   display: flex;
-  color: #fff;
-  font-size: 100px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 115px;
-  word-wrap: break-word;
-  justify-content: flex-start;
+  line-height: 1.15;
+  justify-content: start;
   text-align: left;
 }
 
-.cover_title .first-line_start {
+.aligned-text_start {
   letter-spacing: 30px;
 }
 
-.cover_title .first-line_end {
+.aligned-text_end {
   letter-spacing: 60px;
 }
 
-.cover_title .second-line {
+.aligned-text_center {
   display: flex;
-  color: #fff;
-  font-size: 100px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 100px;
-  word-wrap: break-word;
+  line-height: 1;
   justify-content: center;
   text-align: center;
-  left: 40px;
   gap: 30px;
 }
 
-.cover_title .second-line_start {
+.aligned-text_center_start {
   letter-spacing: 30px;
 }
 
-.cover_title .second-line_end {
+.aligned-text_center_end {
   letter-spacing: 60px;
 }
 
-.cover_title .third-line {
+.aligned-text_right {
   display: flex;
-  color: #fff;
-  font-size: 100px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 100px;
-  word-wrap: break-word;
+  line-height: 1;
   text-align: right;
   align-self: end;
   justify-self: end;
 }
 
-.cover_title .third-line_start {
+.aligned-text_right_start {
   letter-spacing: 60px;
 }
 
-.cover_title .third-line_middle {
+.aligned-text_right_middle {
   letter-spacing: 30px;
 }
-/* .cover_title .third-line_end {
+/* .cover_title .aligned-text_right_end {
 } */
 
 .cover__description {
@@ -178,37 +162,38 @@ body {
   padding: 72px 50px 51px 78px;
   align-items: center;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .cover__description-text {
   position: relative;
-  width: min-content;
   z-index: 1;
   font-size: 22px;
   font-weight: 400;
-  line-height: 28px;
-  white-space: pre;
-  display: flex;
+  line-height: 1.27;
+  word-spacing: 18.5px;
 }
 
 .bet-button {
+  font-family: Raleway, sans-serif;
   position: relative;
   padding: 12px 32px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   z-index: 1;
   width: min-content;
   height: min-content;
   white-space: nowrap;
   font-size: 22px;
   font-weight: 500;
-  line-height: 25.83px;
+  line-height: 1.17;
   background: transparent;
   color: #fff;
+  text-transform: uppercase;
 }
 
 /* Часть 2. Лоты */
 .lots {
-  margin: 178px 24px 0 24px;
+  margin: 180px 24px 0 24px;
 }
 
 .lots__heading {
@@ -216,7 +201,7 @@ body {
   margin-bottom: 27px;
   font-size: 40px;
   font-weight: 700;
-  line-height: 46.96px;
+  line-height: 1.17;
   text-align: left;
   text-transform: uppercase;
 }
@@ -277,31 +262,29 @@ body {
 .card__title {
   font-size: 22px;
   font-weight: 700;
-  line-height: 26.4px;
+  line-height: 1.2;
   text-align: left;
   text-decoration: underline;
   text-transform: uppercase;
-  word-wrap: break-word;
+  text-underline-offset: 4px;
 }
 
 .card__text {
   font-size: 20px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.2;
   text-align: left;
-  word-wrap: break-word;
 }
 
 .lots__look-more-link {
   display: block;
   margin-top: 30px;
   margin-left: 40px;
-
   text-decoration: underline;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  line-height: 23.48px;
+  line-height: 1.17;
   text-align: left;
   text-underline-offset: 4.5px;
 }
@@ -314,7 +297,7 @@ body {
   gap: 25px;
   justify-content: center;
   align-items: start;
-  margin: 146px 24.8px 180px 24.8px;
+  margin: 147px 24.8px 181px 24.8px;
 }
 
 .about__column {
@@ -322,6 +305,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-right: 1px;
+  gap: 24px;
 }
 
 .about__logo {
@@ -342,49 +327,40 @@ body {
 .about__title {
   font-size: 40px;
   font-weight: 700;
-  line-height: 46.96px;
+  line-height: 1.17;
   text-align: left;
   text-transform: uppercase;
   margin-top: 136px;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
   align-self: flex-start;
 }
 
 .about__text {
   font-size: 20px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.2;
   letter-spacing: 0.01em;
   text-align: left;
 }
 
-.about__highlight--pafos {
+.about__highlight--letter-spacing-0 {
   letter-spacing: 0;
 }
 
-.about__highlight--nashi {
-  letter-spacing: 0.02em;
+.about__highlight--letter-spacing-minus-02 {
+  letter-spacing: -0.02em;
 }
 
-.about__highlight--bili {
-  letter-spacing: -0.01em;
-}
-
-.about__highlight--dnevnik {
+.about__highlight--letter-spacing-03 {
   letter-spacing: 0.03em;
 }
 
-.about__text-second {
-  letter-spacing: 0;
-  margin-top: 24px;
+.about__highlight--letter-spacing-minus-01 {
+  letter-spacing: -0.01em;
 }
 
-.about__highlight--oni {
+.about__highlight--letter-spacing-04 {
   letter-spacing: 0.04em;
-}
-
-.about__highlight--neudachnimi {
-  letter-spacing: 0.01em;
 }
 
 /* Подвал */
@@ -406,13 +382,13 @@ body {
   list-style: none;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.13px;
+  line-height: 1.17;
   text-align: center;
 }
 
 .footer__menu-link {
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: 4px;
 }
 
 .footer__menu-link_active {
@@ -420,14 +396,17 @@ body {
 }
 
 .footer__address {
-  justify-self: end;
-  text-align: left;
   font-size: 18px;
   font-weight: 400;
-  line-height: 24.3px;
-  width: 237px;
+  line-height: 1.35;
   text-underline-offset: 4px;
   font-style: normal;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.35;
+  max-width: 237px;
+  width: 100%;
 }
 
 .footer__address a {
